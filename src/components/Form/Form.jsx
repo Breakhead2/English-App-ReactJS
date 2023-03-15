@@ -5,7 +5,7 @@ const Form = () => {
   return (
     <form className="myForm">
       <Table />
-      <Button />
+      {/* <Button /> */}
     </form>
   );
 };

@@ -43,18 +43,12 @@
   border-right: 1px solid gray;
   border-bottom: 1px solid gray;
 }
-.rightCell {
+.tableCell:nth-child(3) {
   border-right: none;
 }
-.bottomCell {
-  border-bottom: none;
-}
-.tableHeading {
-  font-size: 20px;
-}
-.myInput {
+input {
   font-family: 'Learning-Curve', sans-serif;
-  font-size: 32px;
+  font-size: 26px;
   padding: 8px 12px;
   width: 60%;
   border: none;

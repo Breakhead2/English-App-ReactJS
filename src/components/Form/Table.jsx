@@ -1,41 +1,30 @@
-import TableCell from './TableCell';
+import VerbsContext from '../../context/VerbsContext';
+import { useContext } from 'react';
 import TableRow from './TableRow';
 
 const Table = () => {
+  const verbs = useContext(VerbsContext);
+
   return (
     <div className="table">
-      <TableRow>
-        <TableCell className="tableCell">
-          <span className="tableHeading">Infinitive</span>
-        </TableCell>
-        <TableCell className="tableCell">
-          <span className="tableHeading">Past Simple</span>
-        </TableCell>
-        <TableCell className="tableCell rightCell">
-          <span className="tableHeading">Past Participle</span>
-        </TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell className="tableCell">
-          <input className="myInput" type="text" placeholder="verb" />
-        </TableCell>
-        <TableCell className="tableCell">
-          <input
-            className="myInput"
-            type="text"
-            placeholder="verb"
-            value="was/were"
-          />
-        </TableCell>
-        <TableCell className="tableCell rightCell">
-          <input className="myInput" type="text" placeholder="verb" />
-        </TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell className="tableCell bottomCell"></TableCell>
-        <TableCell className="tableCell bottomCell"> </TableCell>
-        <TableCell className="tableCell bottomCell rightCell"></TableCell>
-      </TableRow>
+      <TableRow
+        values={['Infinitive', 'Past Simple', 'Past Participle']}
+        tag={{
+          type: 'span',
+          atr: null,
+        }}
+      />
+      <TableRow
+        values={['be', 'was, were', 'been']}
+        tag={{
+          type: 'input',
+          atr: {
+            type: 'text',
+            placeholder: 'verb',
+          },
+        }}
+      />
+      <TableRow values={null} />
     </div>
   );
 };

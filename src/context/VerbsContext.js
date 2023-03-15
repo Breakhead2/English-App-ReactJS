@@ -1,9 +1,5 @@
-const VerbsContext = [
-  {
-    Infinitive: 'begin',
-    PastSimple: 'began',
-    PastParticiple: 'begun',
-  },
-];
+import { createContext } from 'react';
+
+const VerbsContext = createContext({});
 
 export default VerbsContext;
